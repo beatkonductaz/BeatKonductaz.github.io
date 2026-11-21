@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>BeatKonductaz | The Culture. The Legacy. The Sound.</title>
+
+<meta name="description" content="Explore BeatKonductaz original video content, producer interviews, live performances, beat battles and hip-hop culture.">
+
+<meta property="og:title" content="BeatKonductaz | Video Archive">
+<meta property="og:description" content="Producer interviews. Live performances. Beat battles. Hip-hop culture.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://i.ytimg.com/vi/D37ArAWeoyQ/maxresdefault.jpg">
+
+<meta name="theme-color" content="#07191b">
+
+<style>
+:root {
+  --bg:#07191b;
+  --panel:#0b292c;
+  --panel2:#123b3e;
+  --cream:#eadcb9;
+  --muted:#b9ad90;
+  --rust:#e6532d;
+  --line:rgba(234,220,185,.2);
+  --max:1160px;
+}
+
+* {box-sizing:border-box}
+
+html {scroll-behavior:smooth}
+
+body {
+  margin:0;
+  background:var(--bg);
+  color:var(--cream);
+  font-family:Arial,Helvetica,sans-serif;
+  line-height:1.55;
+}
+
+a {color:inherit}
+
+button {font:inherit}
+
+.wrap {
+  width:min(var(--max),calc(100% - 36px));
+  margin:auto;
+}
+
+/* HEADER */
+
+header {
+  position:sticky;
+  top:0;
+  z-index:20;
+  background:rgba(7,25,27,.96);
+  border-bottom:1px solid var(--line);
+  backdrop-filter:blur(10px);
+}
+
+.nav {
+  min-height:68px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+}
+
+.logo {
+  font-size:15px;
+  font-weight:900;
+  letter-spacing:.09em;
+  text-transform:uppercase;
+  text-decoration:none;
+  white-space:nowrap;
+}
+
+.logo span {color:var(--rust)}
+
+nav {
+  display:flex;
+  align-items:center;
+  gap:24px;
+}
+
+nav a {
+  font-size:11px;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+  text-decoration:none;
+  color:var(--muted);
+}
+
+nav a:hover {color:var(--rust)}
+
+.social {
+  display:flex;
+  gap:8px;
+}
+
+.social a {
+  width:34px;
+  height:34px;
+  display:grid;
+  place-items:center;
+  background:rgba(234,220,185,.09);
+  text-decoration:none;
+  font-weight:bold;
+  font-size:14px;
+}
+
+.social a:hover {
+  background:var(--rust);
+  color:white;
+}
+
+/* INTRO */
+
+.hero {
+  padding:85px 0 72px;
+  background:
+    radial-gradient(ellipse at 75% 25%,rgba(230,83,45,.13),transparent 35%),
+    linear-gradient(130deg,#07191b,#0b292c 60%,#07191b);
+  border-bottom:1px solid var(--line);
+}
+
+.eyebrow {
+  color:var(--rust);
+  text-transform:uppercase;
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.2em;
+}
+
+h1 {
+  font-size:clamp(48px,8vw,94px);
+  line-height:.91;
+  letter-spacing:-.055em;
+  text-transform:uppercase;
+  margin:15px 0;
+}
+
+h1 span {color:var(--rust)}
+
+.hero p {
+  color:var(--muted);
+  font-size:18px;
+  max-width:640px;
+  margin:20px 0 26px;
+}
+
+.btn {
+  display:inline-block;
+  padding:12px 18px;
+  background:var(--rust);
+  color:#fff5df;
+  text-decoration:none;
+  text-transform:uppercase;
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:.12em;
+}
+
+.btn:hover {background:#bd3e20}
+
+/* GENERAL SECTIONS */
+
+section {
+  padding:76px 0;
+  border-bottom:1px solid var(--line);
+}
+
+.section-top {
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  gap:30px;
+  margin-bottom:32px;
+}
+
+.section-label {
+  color:var(--rust);
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+}
+
+h2 {
+  margin:7px 0 0;
+  font-size:clamp(34px,5vw,55px);
+  line-height:.98;
+  text-transform:uppercase;
+  letter-spacing:-.035em;
+}
+
+.section-intro {
+  max-width:510px;
+  color:var(--muted);
+  font-size:15px;
+}
+
+/* VIDEO CARDS */
+
+.video-feature {
+  max-width:950px;
+  margin:0 auto;
+}
+
+.video-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+
+.video-card {min-width:0}
+
+.video {
+  display:block;
+  width:100%;
+  padding:0;
+  position:relative;
+  aspect-ratio:16/9;
+  overflow:hidden;
+  background:#000;
+  border:0;
+  cursor:pointer;
+  color:white;
+  text-align:left;
+}
+
+.video img {
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  opacity:.85;
+  transition:transform .3s,opacity .3s;
+}
+
+.video:hover img {
+  transform:scale(1.04);
+  opacity:1;
+}
+
+.video iframe {
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  border:0;
+}
+
+.play {
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+  width:58px;
+  height:58px;
+  border-radius:50%;
+  background:var(--rust);
+}
+
+.play:after {
+  content:"";
+  position:absolute;
+  left:24px;
+  top:17px;
+  border-left:19px solid white;
+  border-top:12px solid transparent;
+  border-bottom:12px solid transparent;
+}
+
+.video:hover .play {transform:translate(-50%,-50%) scale(1.1)}
+
+.video-caption {
+  padding:15px 0 6px;
+}
+
+.video-caption h3 {
+  margin:0;
+  font-size:18px;
+  line-height:1.2;
+  text-transform:uppercase;
+}
+
+.video-caption p {
+  margin:6px 0 0;
+  color:var(--muted);
+  font-size:13px;
+}
+
+.featured .video-caption h3 {
+  font-size:25px;
+}
+
+.featured .video-caption p {
+  font-size:14px;
+}
+
+.subheading {
+  margin:42px 0 20px;
+  padding-bottom:12px;
+  border-bottom:1px solid var(--line);
+  font-size:22px;
+  text-transform:uppercase;
+  letter-spacing:.02em;
+}
+
+/* LOUNGE SERIES */
+
+#lounge {background:var(--panel)}
+
+.lounge-info {
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:10px 25px;
+  margin-top:24px;
+  padding-top:18px;
+  border-top:1px solid var(--line);
+  color:var(--muted);
+  font-size:13px;
+}
+
+.lounge-info strong {
+  color:var(--cream);
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  font-size:11px;
+}
+
+/* RICH FLIP */
+
+.rich-info {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:30px;
+  margin-top:30px;
+}
+
+.info-block {
+  padding:22px;
+  background:rgba(234,220,185,.05);
+  border-left:2px solid var(--rust);
+}
+
+.info-block h3 {
+  margin:0 0 12px;
+  font-size:19px;
+  text-transform:uppercase;
+}
+
+.info-block p {
+  margin:0;
+  color:var(--muted);
+  font-size:14px;
+}
+
+.panelists {
+  margin:12px 0 0;
+  padding:0;
+  list-style:none;
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+}
+
+.panelists li {
+  padding:7px 10px;
+  background:rgba(234,220,185,.08);
+  font-size:12px;
+}
+
+/* ABOUT */
+
+#about {background:var(--panel)}
+
+.about-grid {
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  gap:45px;
+}
+
+.about-copy {
+  color:var(--muted);
+  font-size:16px;
+}
+
+.about-copy strong {color:var(--cream)}
+
+.about-tagline {
+  border-left:3px solid var(--rust);
+  padding:10px 0 10px 22px;
+  align-self:center;
+  font-size:27px;
+  line-height:1.2;
+  font-weight:900;
+  text-transform:uppercase;
+}
+
+/* CONTACT */
+
+.connect-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+}
+
+.connect {
+  display:block;
+  padding:22px;
+  background:rgba(234,220,185,.07);
+  text-decoration:none;
+  transition:background .2s;
+}
+
+.connect:hover {background:var(--rust)}
+
+.connect strong {
+  display:block;
+  text-transform:uppercase;
+  font-size:16px;
+}
+
+.connect span {
+  color:var(--muted);
+  font-size:13px;
+}
+
+.connect:hover span {color:white}
+
+/* FOOTER */
+
+footer {
+  padding:42px 0;
+  background:#051315;
+}
+
+.footer-row {
+  display:flex;
+  justify-content:space-between;
+  gap:25px;
+  align-items:center;
+}
+
+footer p {
+  margin:0;
+  color:var(--muted);
+  font-size:12px;
+}
+
+footer strong {
+  text-transform:uppercase;
+  letter-spacing:.1em;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:850px) {
+  nav {gap:13px}
+  nav a {font-size:10px}
+  .section-top {display:block}
+  .section-intro {margin-top:12px}
+  .video-grid {grid-template-columns:repeat(2,1fr)}
+}
+
+@media(max-width:600px) {
+  .wrap {width:calc(100% - 26px)}
+  .nav {min-height:60px}
+  nav {display:none}
+  .hero {padding:65px 0}
+  section {padding:60px 0}
+  .video-grid {grid-template-columns:1fr}
+  .rich-info,.about-grid {grid-template-columns:1fr}
+  .connect-grid {grid-template-columns:1fr 1fr}
+  .footer-row {display:block}
+  footer p {margin-top:10px}
+  .featured .video-caption h3 {font-size:21px}
+}
+
+@media(prefers-reduced-motion:reduce) {
+  html {scroll-behavior:auto}
+  * {transition:none!important}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="wrap nav">
+
+    <a class="logo" href="#top">
+      Beat<span>Konductaz</span>
+    </a>
+
+    <nav aria-label="Main navigation">
+      <a href="#lounge">Lounge Series</a>
+      <a href="#richflip">The Rich Flip</a>
+      <a href="#battles">Battles</a>
+      <a href="#about">About</a>
+      <a href="#connect">Connect</a>
+    </nav>
+
+    <div class="social">
+      <a href="https://www.instagram.com/beatkonductaz/" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+      <a href="https://www.youtube.com/beatkonductaz" target="_blank" rel="noopener" aria-label="YouTube">YT</a>
+    </div>
+
+  </div>
+</header>
+
+<main id="top">
+
+<!-- INTRO -->
+
+<div class="hero">
+  <div class="wrap">
+
+    <div class="eyebrow">Independent Hip-Hop & Beat Culture</div>
+
+    <h1>
+      The Culture.<br>
+      The Legacy.<br>
+      <span>The Sound.</span>
+    </h1>
+
+    <p>
+      Producer showcases, interviews, live performances,
+      beat battles and conversations documenting the culture.
+    </p>
+
+    <a class="btn" href="#lounge">Explore the Videos</a>
+
+  </div>
+</div>
+
+<!-- LOUNGE SERIES -->
+
+<section id="lounge">
+
+  <div class="wrap">
+
+    <div class="section-top">
+      <div>
+        <div class="section-label">Original Series</div>
+        <h2>Lounge Series</h2>
+      </div>
+
+      <p class="section-intro">
+        Conversations with producers, followed by live
+        instrumental performances. Featuring Kount Fif
+        and Jeck Da General, hosted by Lord Betta.
+      </p>
+    </div>
+
+    <div class="video-feature featured">
+
+      <div class="video-card">
+
+        <button class="video"
+                type="button"
+                data-yt="D37ArAWeoyQ"
+                aria-label="Watch the Lounge Series">
+
+          <img src="https://i.ytimg.com/vi/D37ArAWeoyQ/hqdefault.jpg"
+               alt="BeatKonductaz Lounge Series"
+               loading="lazy">
+
+          <span class="play"></span>
+
+        </button>
+
+        <div class="video-caption">
+          <h3>BeatKonductaz Lounge Series</h3>
+          <p>
+            Kount Fif • Jeck Da General • Hosted by Lord Betta
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="lounge-info">
+      <span><strong>Featuring</strong> Kount Fif & Jeck Da General</span>
+      <span><strong>Host</strong> Lord Betta</span>
+      <span><strong>Produced</strong> OHLOW</span>
+      <span><strong>Directed</strong> Mark Fronk</span>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- THE RICH FLIP -->
+
+<section id="richflip">
+
+  <div class="wrap">
+
+    <div class="section-top">
+      <div>
+        <div class="section-label">Macon, Georgia</div>
+        <h2>The Rich Flip</h2>
+      </div>
+
+      <p class="section-intro">
+        A celebration of Little Richard, music history,
+        hip-hop culture, live art and sound design.
+      </p>
+    </div>
+
+    <h3 class="subheading">Discussion Panel</h3>
+
+    <div class="video-grid">
+
+      <div class="video-card featured" style="grid-column:1/-1">
+
+        <button class="video"
+                type="button"
+                data-yt="2BImg943ruE"
+                aria-label="Watch The Rich Flip discussion panel">
+
+          <img src="https://i.ytimg.com/vi/2BImg943ruE/hqdefault.jpg"
+               alt="The Rich Flip discussion panel"
+               loading="lazy">
+
+          <span class="play"></span>
+
+        </button>
+
+        <div class="video-caption">
+          <h3>The Rich Flip — Hip-Hop Discussion Panel</h3>
+          <p>
+            A conversation about music, culture and history.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="rich-info">
+
+      <div class="info-block">
+        <h3>Panelists</h3>
+
+        <ul class="panelists">
+          <li>Maureen "Ma Dukes" Yancey</li>
+          <li>BocaFloja</li>
+          <li>Stanley Stewart</li>
+          <li>Shawn J. Period</li>
+          <li>Toney Smith</li>
+          <li>Dumi Right</li>
+        </ul>
+      </div>
+
+      <div class="info-block">
+        <h3>About the Event</h3>
+        <p>
+          Presented by Kevin "SCENE" Lewis featuring
+          BeatKonductaz, The Rich Flip brought together
+          hip-hop voices, producers, artists and community
+          members in Macon, Georgia, for a cultural tribute
+          to Little Richard.
+        </p>
+      </div>
+
+    </div>
+
+    <h3 class="subheading">The Beat Battle</h3>
+
+    <div class="video-grid">
+
+      <div class="video-card featured" style="grid-column:1/-1">
+
+        <button class="video"
+                type="button"
+                data-yt="-je4IjdEtUQ"
+                aria-label="Watch Jeck Da General, winner of The Rich Flip battle">
+
+          <img src="https://i.ytimg.com/vi/-je4IjdEtUQ/hqdefault.jpg"
+               alt="Jeck Da General, winner of The Rich Flip beat battle"
+               loading="lazy">
+
+          <span class="play"></span>
+
+        </button>
+
+        <div class="video-caption">
+          <h3>Jeck Da General — Battle Winner</h3>
+          <p>
+            The winning performance from The Rich Flip sound design battle.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- BEATKONDUCTAZ BATTLES -->
+
+<section id="battles" style="background:var(--panel)">
+
+  <div class="wrap">
+
+    <div class="section-top">
+      <div>
+        <div class="section-label">Producer Competition</div>
+        <h2>BeatKonductaz Battles</h2>
+      </div>
+
+      <p class="section-intro">
+        Producers go head-to-head. Original beats,
+        creative flips and competition rooted in the culture.
+      </p>
+    </div>
+
+    <h3 class="subheading">Featured Performance</h3>
+
+    <div class="video-grid">
+
+      <div class="video-card">
+
+        <button class="video"
+                type="button"
+                data-yt="HCORRaPnmW4"
+                aria-label="Watch Apollo Brown performance">
+
+          <img src="https://i.ytimg.com/vi/HCORRaPnmW4/hqdefault.jpg"
+               alt="Apollo Brown performing at BeatKonductaz Battles"
+               loading="lazy">
+
+          <span class="play"></span>
+
+        </button>
+
+        <div class="video-caption">
+          <h3>Apollo Brown</h3>
+          <p>Featured live performance</p>
+        </div>
+
+      </div>
+
+      <div class="video-card">
+
+        <button class="video"
+                type="button"
+                data-yt="H0q4bRsUZWM"
+                aria-label="Watch A Little Louder beat battle">
+
+          <img src="https://i.ytimg.com/vi/H0q4bRsUZWM/hqdefault.jpg"
+               alt="A Little Louder beat battle"
+               loading="lazy">
+
+          <span class="play"></span>
+
+        </button>
+
+        <div class="video-caption">
+          <h3>A Little Louder</h3>
+          <p>Beat Battle • August 2020</p>
+        </div>
+
+      </div>
+
+      <div class="video-card">
+
+        <button class="video"
+                type="button"
+                data-yt="-w78SguyDSo"
+                aria-label="Watch Coast to Coast beat battle">
+
+          <img src="https://i.ytimg.com/vi/-w78SguyDSo/hqdefault.jpg"
+               alt="Coast to Coast beat battle"
+               loading="lazy">
+
+          <span class="play"></span>
+
+        </button>
+
+        <div class="video-caption">
+          <h3>Coast to Coast</h3>
+          <p>Beat Battle • October 2020</p>
+        </div>
+
+      </div>
+
+      <div class="video-card">
+
+        <button class="video"
+                type="button"
+                data-yt="lxo2Gmkjt-s"
+                aria-label="Watch 28 Days of Dilla">
+
+          <img src="https://i.ytimg.com/vi/lxo2Gmkjt-s/hqdefault.jpg"
+               alt="28 Days of Dilla winner Kel C"
+               loading="lazy">
+
+          <span class="play"></span>
+
+        </button>
+
+        <div class="video-caption">
+          <h3>28 Days of Dilla</h3>
+          <p>Winner: Kel C</p>
+        </div>
+
+      </div>
+
+    </div>
+
+    <h3 class="subheading">More from the Archive</h3>
+
+    <div class="video-grid">
+
+      <div class="video-card">
+        <button class="video" type="button" data-yt="HHfcAq-zlkI" aria-label="Watch Apollo Brown Live DMV">
+          <img src="https://i.ytimg.com/vi/HHfcAq-zlkI/hqdefault.jpg" alt="Apollo Brown Live DMV" loading="lazy">
+          <span class="play"></span>
+        </button>
+        <div class="video-caption">
+          <h3>Apollo Brown Live</h3>
+          <p>DMV</p>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <button class="video" type="button" data-yt="Zytjs5pQbxc" aria-label="Watch BeatKonductaz archive video">
+          <img src="https://i.ytimg.com/vi/Zytjs5pQbxc/hqdefault.jpg" alt="BeatKonductaz video archive" loading="lazy">
+          <span class="play"></span>
+        </button>
+        <div class="video-caption">
+          <h3>BeatKonductaz Archive</h3>
+          <p>Video 02</p>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <button class="video" type="button" data-yt="F2ugwj3p0vE" aria-label="Watch BeatKonductaz archive video">
+          <img src="https://i.ytimg.com/vi/F2ugwj3p0vE/hqdefault.jpg" alt="BeatKonductaz video archive" loading="lazy">
+          <span class="play"></span>
+        </button>
+        <div class="video-caption">
+          <h3>BeatKonductaz Archive</h3>
+          <p>Video 03</p>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <button class="video" type="button" data-yt="auOstm1IN8s" aria-label="Watch BeatKonductaz archive video">
+          <img src="https://i.ytimg.com/vi/auOstm1IN8s/hqdefault.jpg" alt="BeatKonductaz video archive" loading="lazy">
+          <span class="play"></span>
+        </button>
+        <div class="video-caption">
+          <h3>BeatKonductaz Archive</h3>
+          <p>Video 04</p>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <button class="video" type="button" data-yt="3v-FuGQkFGg" aria-label="Watch BeatKonductaz archive video">
+          <img src="https://i.ytimg.com/vi/3v-FuGQkFGg/hqdefault.jpg" alt="BeatKonductaz video archive" loading="lazy">
+          <span class="play"></span>
+        </button>
+        <div class="video-caption">
+          <h3>BeatKonductaz Archive</h3>
+          <p>Video 05</p>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <button class="video" type="button" data-yt="WPgCVBmj38Y" aria-label="Watch BeatKonductaz archive video">
+          <img src="https://i.ytimg.com/vi/WPgCVBmj38Y/hqdefault.jpg" alt="BeatKonductaz video archive" loading="lazy">
+          <span class="play"></span>
+        </button>
+        <div class="video-caption">
+          <h3>BeatKonductaz Archive</h3>
+          <p>Video 06</p>
+        </div>
+      </div>
+
+      <div class="video-card">
+        <button class="video" type="button" data-yt="kcKBbmulMZk" aria-label="Watch BeatKonductaz archive video">
+          <img src="https://i.ytimg.com/vi/kcKBbmulMZk/hqdefault.jpg" alt="BeatKonductaz video archive" loading="lazy">
+          <span class="play"></span>
+        </button>
+        <div class="video-caption">
+          <h3>BeatKonductaz Archive</h3>
+          <p>Video 07</p>
+        </div>
+      </div>
+
+    </div>
+
+    <p style="margin-top:30px">
+      <a class="btn" href="https://www.youtube.com/beatkonductaz" target="_blank" rel="noopener">
+        Explore More on YouTube
+      </a>
+    </p>
+
+  </div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+  <div class="wrap about-grid">
+
+    <div>
+      <div class="section-label">Who We Are</div>
+      <h2>BeatKonductaz</h2>
+
+      <div class="about-copy">
+        <p>
+          BeatKonductaz is an independent organization dedicated
+          to hip-hop and beat culture, connecting producers,
+          DJs, artists and communities through music,
+          events, showcases and original programming.
+        </p>
+
+        <p>
+          From producer battles and live performances to
+          conversations about the people and history behind
+          the music, BeatKonductaz documents and celebrates
+          the culture.
+        </p>
+
+        <p>
+          Built on community, creativity and respect for
+          the craft.
+        </p>
+      </div>
+    </div>
+
+    <div class="about-tagline">
+      The Culture.<br>
+      The Legacy.<br>
+      The Sound.
+    </div>
+
+  </div>
+
+</section>
+
+<!-- CONNECT -->
+
+<section id="connect" style="background:var(--panel)">
+
+  <div class="wrap">
+
+    <div class="section-top">
+      <div>
+        <div class="section-label">Stay Connected</div>
+        <h2>Follow the Movement.</h2>
+      </div>
+
+      <p class="section-intro">
+        Keep up with new videos, producer showcases,
+        battles and BeatKonductaz projects.
+      </p>
+    </div>
+
+    <div class="connect-grid">
+
+      <a class="connect" href="https://www.instagram.com/beatkonductaz/" target="_blank" rel="noopener">
+        <strong>Instagram</strong>
+        <span>@beatkonductaz</span>
+      </a>
+
+      <a class="connect" href="https://www.youtube.com/beatkonductaz" target="_blank" rel="noopener">
+        <strong>YouTube</strong>
+        <span>Videos and performances</span>
+      </a>
+
+      <a class="connect" href="https://www.facebook.com/beatkonductaz" target="_blank" rel="noopener">
+        <strong>Facebook</strong>
+        <span>BeatKonductaz community</span>
+      </a>
+
+      <a class="connect" href="mailto:beatkonductaz@gmail.com">
+        <strong>Email</strong>
+        <span>beatkonductaz@gmail.com</span>
+      </a>
+
+      <a class="connect" href="https://www.beatkonductaz.com" target="_blank" rel="noopener">
+        <strong>Website</strong>
+        <span>BeatKonductaz</span>
+      </a>
+
+      <a class="connect" href="https://www.instagram.com/djohlow/" target="_blank" rel="noopener">
+        <strong>OHLOW</strong>
+        <span>Producer / DJ</span>
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap footer-row">
+    <strong>BeatKonductaz</strong>
+    <p>The Culture. The Legacy. The Sound. &nbsp; | &nbsp; © 2026 BeatKonductaz</p>
+  </div>
+</footer>
+
+<script>
+/* Load YouTube videos only when clicked */
+
+document.querySelectorAll('.video[data-yt]').forEach(function(button) {
+
+  button.addEventListener('click', function() {
+
+    var videoId = button.getAttribute('data-yt');
+
+    var iframe = document.createElement('iframe');
+
+    iframe.src =
+      'https://www.youtube-nocookie.com/embed/' +
+      videoId +
+      '?autoplay=1&rel=0';
+
+    iframe.title =
+      button.getAttribute('aria-label') || 'BeatKonductaz video';
+
+    iframe.allow =
+      'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+
+    iframe.allowFullscreen = true;
+
+    button.innerHTML = '';
+    button.appendChild(iframe);
+    button.style.cursor = 'default';
+
+  }, {once:true});
+
+});
+</script>
+
+</body>
+</html>
